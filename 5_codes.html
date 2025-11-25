@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Project for Z.A</title>
+<style>
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("background.jpg");  
+    background-size: cover;        
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+  }
+h1 { text-align: center; }
+.box { background: white; padding: 15px; margin: 20px auto; width: 50%; border-radius: 6px; }
+input { padding: 6px; margin: 4px; }
+button { padding: 6px 10px; }
+</style>
+</head>
+<body>
+
+
+<h1>5 Codes</h1>
+
+
+<div class="box">
+<h2>Add Two Numbers</h2>
+<input id="a1" type="number">
+<input id="a2" type="number">
+<button onclick="addNum()">Add</button>
+<p id="addOut"></p>
+</div>
+
+
+<div class="box">
+<h2>Subtract Two Numbers</h2>
+<input id="s1" type="number">
+<input id="s2" type="number">
+<button onclick="subNum()">Subtract</button>
+<p id="subOut"></p>
+</div>
+
+
+<div class="box">
+<h2>Multiply Two Numbers</h2>
+<input id="m1" type="number">
+<input id="m2" type="number">
+<button onclick="mulNum()">Multiply</button>
+<p id="mulOut"></p>
+</div>
+
+
+<div class="box">
+<h2>Divide Two Numbers</h2>
+<input id="d1" type="number">
+<input id="d2" type="number">
+<button onclick="divNum()">Divide</button>
+<p id="divOut"></p>
+</div>
+
+
+<div class="box">
+<h2>Find the Remainder</h2>
+<input id="r1" type="number">
+<input id="r2" type="number">
+<button onclick="remNum()">Remainder</button>
+<p id="remOut"></p>
+</div>
+
+
+<script>
+function addNum(){
+let x = Number(document.getElementById("a1").value);
+let y = Number(document.getElementById("a2").value);
+document.getElementById("addOut").innerText = "Result: " + (x + y);
+}
+
+
+function subNum(){
+let x = Number(document.getElementById("s1").value);
+let y = Number(document.getElementById("s2").value);
+document.getElementById("subOut").innerText = "Result: " + (x - y);
+}
+
+
+function mulNum(){
+let x = Number(document.getElementById("m1").value);
+let y = Number(document.getElementById("m2").value);
+document.getElementById("mulOut").innerText = "Result: " + (x * y);
+}
+
+
+function divNum(){
+let x = Number(document.getElementById("d1").value);
+let y = Number(document.getElementById("d2").value);
+if(y === 0){ document.getElementById("divOut").innerText = "Cannot divide by zero"; return; }
+document.getElementById("divOut").innerText = "Result: " + (x / y);
+}
+
+
+function remNum(){
+let x = Number(document.getElementById("r1").value);
+let y = Number(document.getElementById("r2").value);
+if(y === 0){ document.getElementById("remOut").innerText = "Cannot divide by zero"; return; }
+document.getElementById("remOut").innerText = "Result: " + (x % y);
+}
+</script>
+
+
+</body>
+</html>

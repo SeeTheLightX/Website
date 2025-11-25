@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Project for Z.A</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    background-color: rgba(83, 20, 155, 0.9);
+    padding: 20px;
+    margin-top: 120px;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gate-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .gate-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px black;
+  }
+
+  .gate-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .gate-img-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 0 20px black;
+  }
+
+  .gate-img-box img {
+    width: 100%;
+  }
+
+  .button-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .input-btn {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .input-btn:hover {
+    background: white;
+    color: black;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>Logic Gate Demonstration</h1>
+
+<div class="gate-section">
+  <div class="gate-title">NOT Gate</div>
+
+  <div class="gate-box">
+    <div class="gate-img-box">
+      <img id="not-img" src="1.png">
+    </div>
+  </div>
+
+  <div class="button-row">
+    <button class="input-btn" onclick="changeImg('not-img', '1.png')">0</button>
+    <button class="input-btn" onclick="changeImg('not-img', '2.png')">1</button>
+  </div>
+</div>
+
+
+<div class="gate-section">
+  <div class="gate-title">AND Gate</div>
+
+  <div class="gate-box">
+    <div class="gate-img-box">
+      <img id="and-img" src="3.png">
+    </div>
+  </div>
+
+  <div class="button-row">
+    <button class="input-btn" onclick="changeImg('and-img', '3.png')">00</button>
+    <button class="input-btn" onclick="changeImg('and-img', '4.png')">10</button>
+    <button class="input-btn" onclick="changeImg('and-img', '5.png')">01</button>
+    <button class="input-btn" onclick="changeImg('and-img', '6.png')">11</button>
+  </div>
+</div>
+
+<div class="gate-section">
+  <div class="gate-title">OR Gate</div>
+
+  <div class="gate-box">
+    <div class="gate-img-box">
+      <img id="or-img" src="7.png">
+    </div>
+  </div>
+
+  <div class="button-row">
+    <button class="input-btn" onclick="changeImg('or-img', '7.png')">00</button>
+    <button class="input-btn" onclick="changeImg('or-img', '8.png')">10</button>
+    <button class="input-btn" onclick="changeImg('or-img', '9.png')">01</button>
+    <button class="input-btn" onclick="changeImg('or-img', '10.png')">11</button>
+  </div>
+</div>
+
+<div class="gate-section">
+  <div class="gate-title">XOR Gate</div>
+
+  <div class="gate-box">
+    <div class="gate-img-box">
+      <img id="xor-img" src="11.png">
+    </div>
+  </div>
+
+  <div class="button-row">
+    <button class="input-btn" onclick="changeImg('xor-img', '11.png')">00</button>
+    <button class="input-btn" onclick="changeImg('xor-img', '12.png')">10</button>
+    <button class="input-btn" onclick="changeImg('xor-img', '13.png')">01</button>
+    <button class="input-btn" onclick="changeImg('xor-img', '14.png')">11</button>
+  </div>
+</div>
+
+
+<script>
+function changeImg(imgId, newSrc) {
+  document.getElementById(imgId).src = newSrc;
+}
+</script>
+
+</body>
+</html>

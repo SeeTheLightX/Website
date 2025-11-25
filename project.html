@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Project for Z.A</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("background.jpg");  
+    background-size: cover;        
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+  }
+
+  header {
+    width: 100%;
+    background-color: rgba(83, 20, 155, 0.9);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+
+  nav {
+    margin-right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #ffd166;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    background-color: rgba(83, 20, 155, 0.9);
+    padding: 20px;
+    margin-top: 120px;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slider-container {
+    width: 70%;
+    height: 350px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(83,20,155,0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 2px solid rgba(150,80,255,0.45);
+    box-shadow: 
+      0 0 25px rgba(140,60,255,0.8),
+      0 0 20px rgba(83,20,155,0.6) inset,
+      0 0 35px rgba(200,140,255,0.5);
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+
+  .fade {
+    animation: fadeEffect 0.6s ease-in-out;
+  }
+
+  @keyframes fadeEffect {
+    from { opacity:0.4; }
+    to { opacity: 1; }
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    user-select: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .prev:hover, .next:hover {
+    color: #ff4df2;
+    text-shadow: 0 0 10px #ff4df2;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Course</a>
+    <a href="project.html">Project</a>
+    <a href="concepts.html">Concepts</a>
+    <a href="databases.html">Databases</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="dev_team.html">Dev Team</a>
+  </nav>
+</header>
+
+<h1>Projects</h1>
+
+<div class="slider-container">
+
+  <div class="slide fade">
+    <a href="logic_gate.html">
+     Z <img src="AndGate.png" alt="And Gate">
+    </a>
+  </div>
+
+  <div class="slide fade">
+    <a href="bmi_meter.html">
+      <img src="BMI.png" alt="BMI Calc">
+    </a>
+  </div>
+
+  <div class="slide fade">
+    <a href="index.html">
+      <img src="belize_blank.png" alt="Map Game">
+    </a>
+  </div>
+
+  <div class="slide fade">
+    <a href="5_codes.html">
+      <img src="robot.png" alt="Codes">
+    </a>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+</script>
+
+</body>
+</html>

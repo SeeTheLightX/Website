@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belize Game</title>
+    <link rel="stylesheet" href="css_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h2>Map of Belize</h2>
+        <p>Click on a district below to see it highlighted on the map and learn more about it.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="map-section">
+            <img id="myImage" src="belize_blank.png" alt="Map of Belize">
+        </section>
+
+        <section class="info-section">
+            <h3>District Information</h3>
+            <p id="infoText">Click a district to display information here.</p>
+
+            <div class="btn-group">
+                <button onclick="showDistrict('Corozal', 'belize_corozal.png', 'Corozal is the northernmost district of Belize, known for its sugar cane fields and proximity to Mexico.')">Corozal</button>
+                <button onclick="showDistrict('Orange Walk', 'belize_orangewalk.png', 'Orange Walk District is abundant in different types of Spanish foods and home to the Lamanai ruins.')">Orange Walk</button>
+                <button onclick="showDistrict('Belize City', 'belize_city.png', 'Belize City is the country’s largest urban area and main port of entry.')">Belize City</button>
+                <button onclick="showDistrict('Cayo', 'belize_belmopan.png', 'Cayo District is home to the capital city, Belmopan, and many natural reserves.')">Cayo</button>
+                <button onclick="showDistrict('Stann Creek', 'belize_stanncreek.png', 'Stann Creek features beautiful coastal towns like Dangriga and Placencia.')">Stann Creek</button>
+                <button onclick="showDistrict('Toledo', 'belize_toledo.png', 'Toledo is the southernmost district, rich in Mayan culture and rainforest landscapes.')">Toledo</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by: <strong>Zabdiel Ayiyi</strong></p>
+    </footer>
+
+    <script>
+        function showDistrict(name, imageSrc, info) {
+            const image = document.getElementById('myImage');
+            const infoText = document.getElementById('infoText');
+
+            image.src = imageSrc;
+            infoText.textContent = info;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Project for Z.A</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("background.jpg");  
+    background-size: cover;        
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center; 
+  }
+
+  header {
+    width: 100%;
+    background-color: rgba(83, 20, 155, 0.9);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+
+  nav {
+    margin-right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #ffd166;
+  }
+ 
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    background-color: rgba(83, 20, 155, 0.9);
+    padding: 20px;
+    margin-top: 120px;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ppt-box {
+    width: 400px;
+    margin: 30px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .ppt-box img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .ppt-box p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Course</a>
+    <a href="project.html">Project</a>
+    <a href="concepts.html">Concepts</a>
+    <a href="databases.html">Databases</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="dev_team.html">Dev Team</a>
+  </nav>
+</header>
+<h1>PowerPoint Presentation</h1>
+
+<a href="2.1 Computer Arc.pptx" download>
+  <div class="ppt-box">
+    <img src="PPTX.png" alt="PowerPoint Preview">
+  </div>
+</a>
+
+<p style="text-align:center; color:white; font-size:22px;">
+  Click the image above to open the PowerPoint file.
+</p>
+
+</body>
+</html>
