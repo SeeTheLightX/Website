@@ -1,10 +1,37 @@
 body {
-    background-color: #f9f9f9;
-    font-family: "Poppins", sans-serif;
-    color: #b30000; 
-    text-align: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #800000;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #0b3a61 50%, #10213a 100%);
+}
+
+/* resume page background image (uses background.jpg in the same folder) */
+.resume-bg {
+    /* layered background: subtle dark overlay on top of the photo for readability */
+    background: linear-gradient(rgba(8,12,20,0.45), rgba(8,12,20,0.45)), url("background.jpg") center/cover no-repeat fixed;
+}
+
+/* animated soft gradient overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, rgba(83,20,155,0.45), rgba(255,126,95,0.25), rgba(0,200,255,0.20));
+    background-size: 600% 600%;
+    filter: blur(30px);
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h2 {
